@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="904c255a-dfda-488d-bd8b-0a1c00491692" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProductsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProductsPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,52 +39,51 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.LoginTest.loginWithIncorrectCredentialsTest">
-    <configuration name="LoginTest.loginSuccess1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProductsPageTests.filterByPriceFromHighToLow">
+    <configuration name="ProductsPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="loginSuccess1Test" />
+      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsPageTests.filterByNameFromAtoZTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
+      <option name="METHOD_NAME" value="filterByNameFromAtoZTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginSuccessTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductsPageTests.filterByPriceFromHighToLow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="loginSuccessTest" />
+      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
+      <option name="METHOD_NAME" value="filterByPriceFromHighToLow" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginWithEmptyFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductsPageTests.filterByPriceFromLowToHigh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="loginWithEmptyFields" />
+      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
+      <option name="METHOD_NAME" value="filterByPriceFromLowToHigh" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest.loginWithEmptyPasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductsPageTests.firstProductHasPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="loginWithEmptyPasswordTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginTest.loginWithIncorrectCredentialsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginTest" />
-      <option name="METHOD_NAME" value="loginWithIncorrectCredentialsTest" />
+      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
+      <option name="METHOD_NAME" value="firstProductHasPriceTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,11 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginTest.loginWithIncorrectCredentialsTest" />
-        <item itemvalue="JUnit.LoginTest.loginWithEmptyPasswordTest" />
-        <item itemvalue="JUnit.LoginTest.loginWithEmptyFields" />
-        <item itemvalue="JUnit.LoginTest.loginSuccessTest" />
-        <item itemvalue="JUnit.LoginTest.loginSuccess1Test" />
+        <item itemvalue="JUnit.ProductsPageTests.filterByPriceFromHighToLow" />
+        <item itemvalue="JUnit.ProductsPageTests.filterByPriceFromLowToHigh" />
+        <item itemvalue="JUnit.ProductsPageTests" />
+        <item itemvalue="JUnit.ProductsPageTests.filterByNameFromAtoZTest" />
+        <item itemvalue="JUnit.ProductsPageTests.firstProductHasPriceTest" />
       </list>
     </recent_temporary>
   </component>
