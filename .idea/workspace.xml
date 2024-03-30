@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="904c255a-dfda-488d-bd8b-0a1c00491692" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProductsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProductsPageTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShoppingCartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProductsPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProductsPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ProductsPageTests.filterByPriceFromHighToLow">
+  <component name="RunManager" selected="JUnit.ProductsPageTests.addProductToCartTest">
     <configuration name="ProductsPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <option name="PACKAGE_NAME" value="" />
@@ -49,11 +50,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsPageTests.filterByNameFromAtoZTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductsPageTests.addProductToCartTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
-      <option name="METHOD_NAME" value="filterByNameFromAtoZTest" />
+      <option name="METHOD_NAME" value="addProductToCartTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsPageTests.addToCartBadgeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
+      <option name="METHOD_NAME" value="addToCartBadgeTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,23 +90,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsPageTests.firstProductHasPriceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProductsPageTests" />
-      <option name="METHOD_NAME" value="firstProductHasPriceTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductsPageTests.addProductToCartTest" />
+        <item itemvalue="JUnit.ProductsPageTests.addToCartBadgeTest" />
         <item itemvalue="JUnit.ProductsPageTests.filterByPriceFromHighToLow" />
         <item itemvalue="JUnit.ProductsPageTests.filterByPriceFromLowToHigh" />
         <item itemvalue="JUnit.ProductsPageTests" />
-        <item itemvalue="JUnit.ProductsPageTests.filterByNameFromAtoZTest" />
-        <item itemvalue="JUnit.ProductsPageTests.firstProductHasPriceTest" />
       </list>
     </recent_temporary>
   </component>

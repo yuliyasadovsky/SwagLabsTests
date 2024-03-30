@@ -22,8 +22,8 @@ public class ProductsPageTests extends BaseTest {
     @Test
     public void addToCartBadgeTest() {
         ProductsPage productsPage = new ProductsPage();
-        productsPage.clickOnAddToCartButton();
-        Assert.assertTrue(productsPage.getShoppingCartBadge().should().exists());
+        productsPage.addToCartFirstProduct();
+        Assert.assertTrue(productsPage.getShoppingCartBadge().isDisplayed());
     }
 
     @Test
@@ -62,5 +62,14 @@ public class ProductsPageTests extends BaseTest {
         productsPage.clickOnFilterButton().setFilterHighLow();
         Assert.assertTrue(productsPage.isFirstPriceLessThanSecond( productsPage.getLastProductPrice().text(),
                 productsPage.getFirstProductPrice().text()));
+    }
+
+    @Test
+    public void addProductToCartTest() {
+        ProductsPage productsPage = new ProductsPage();
+        productsPage.addToCartFirstProduct();
+        String productNameAdded = productsPage.getFirstProductDescription();
+        String productNameInShoppingCart = productsPage.openShoppingCart().getAddedToCartFirstProductDescription();
+        Assert.assertEquals(productNameAdded, productNameInShoppingCart);
     }
 }

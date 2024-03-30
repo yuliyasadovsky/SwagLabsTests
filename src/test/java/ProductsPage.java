@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class ProductsPage {
 
    // private final ElementsCollection productsList = $$x("//div[@class = \"inventory_item\"]");
-    private final ElementsCollection productsDescriptionList = $$x("//div[@class = \"inventory_item_name \"]");
+    private final ElementsCollection productsList = $$x("//div[@class = \"inventory_item_name \"]");
     private final ElementsCollection addToCartButtons = $$x("//button[@class = \"btn btn_primary btn_small btn_inventory \"]");
     private final SelenideElement shoppingCartBadge = $x("//span[@class = \"shopping_cart_badge\"]");
     private final ElementsCollection priceLabels = $$x("//div[@class = \"inventory_item_price\"]");
@@ -16,14 +16,15 @@ public class ProductsPage {
     private final SelenideElement filterOptionZA = $x("//select//option[@value = \"za\"]");
     private final SelenideElement filterOptionLowHigh = $x("//select//option[@value = \"lohi\"]");
     private final SelenideElement filterOptionHighLow = $x("//select//option[@value = \"hilo\"]");
+    private final SelenideElement shoppingCartButton = $x("//div//a[@class = \"shopping_cart_link\"]");
 
 
     public String getFirstProductDescription() {
-        return productsDescriptionList.first().text();
+        return productsList.first().text();
     }
 
     public String  getLastProductDescription() {
-        return productsDescriptionList.last().text();
+        return productsList.last().text();
     }
     public SelenideElement getShoppingCartBadge() {
         return shoppingCartBadge;
@@ -36,8 +37,13 @@ public class ProductsPage {
     public SelenideElement getLastProductPrice() {
         return priceLabels.last();
     }
-    public void clickOnAddToCartButton() {
+    public void addToCartFirstProduct() {
         addToCartButtons.first().click();
+    }
+
+    public ShoppingCartPage openShoppingCart() {
+        shoppingCartButton.click();
+        return new ShoppingCartPage();
     }
 
     public ProductsPage clickOnFilterButton() {
