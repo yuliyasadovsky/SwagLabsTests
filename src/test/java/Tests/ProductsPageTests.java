@@ -1,10 +1,17 @@
-import com.codeborne.selenide.AssertionMode;
-import com.codeborne.selenide.Condition;
+package Tests;
+
+import Pages.LoginPage;
+import Pages.ProductsPage;
+import Tests.BaseTest;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Selenide.$x;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductsPageTests extends BaseTest {
     private final static String BASE_URL = "https://www.saucedemo.com/";
@@ -36,16 +43,16 @@ public class ProductsPageTests extends BaseTest {
     public void filterByNameFromAtoZTest() {
         ProductsPage productsPage = new ProductsPage();
         productsPage.clickOnFilterButton().setFilterAZ();
-        Assert.assertTrue(productsPage.areStringsSortedAlphabetically(productsPage.getFirstProductDescription(),
-                productsPage.getLastProductDescription()));
+        Assert.assertTrue(productsPage.areStringsSortedAlphabetically(productsPage.getFirstProductName(),
+                productsPage.getLastProductName()));
     }
 
     @Test
     public void filterByNameFromZtoATest() {
         ProductsPage productsPage = new ProductsPage();
         productsPage.clickOnFilterButton().setFilterZA();
-        Assert.assertTrue(productsPage.areStringsSortedAlphabetically(productsPage.getLastProductDescription(),
-                productsPage.getFirstProductDescription()));
+        Assert.assertTrue(productsPage.areStringsSortedAlphabetically(productsPage.getLastProductName(),
+                productsPage.getFirstProductName()));
     }
 
     @Test
@@ -68,8 +75,25 @@ public class ProductsPageTests extends BaseTest {
     public void addProductToCartTest() {
         ProductsPage productsPage = new ProductsPage();
         productsPage.addToCartFirstProduct();
-        String productNameAdded = productsPage.getFirstProductDescription();
-        String productNameInShoppingCart = productsPage.openShoppingCart().getAddedToCartFirstProductDescription();
+        String productNameAdded = productsPage.getFirstProductName();
+        String productNameInShoppingCart = productsPage.openShoppingCart().getFirstProductName();
         Assert.assertEquals(productNameAdded, productNameInShoppingCart);
+    }
+
+    @Test
+    public void openAllHrefsTest() {
+        ProductsPage productsPage = new ProductsPage();
+        List<String> links = productsPage.getProductsLinks();
+        for (int i = 0; i < links.size(); i++) {
+            String pageUrl = links.get(i);
+            Selenide.open(pageUrl);
+            String currentUrl = WebDriverRunner.getWebDriver().getCurrentUrl();
+            Assert.assertEquals(pageUrl, currentUrl);
+        }
+    }
+
+    @Test
+    public void useragent() {
+        System.out.println(Selenide.getUserAgent());
     }
 }

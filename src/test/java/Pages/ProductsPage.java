@@ -1,12 +1,17 @@
+package Pages;
+
 import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.codeborne.selenide.Selenide.$$x;
 import static com.codeborne.selenide.Selenide.$x;
 
 
 public class ProductsPage {
-
-   // private final ElementsCollection productsList = $$x("//div[@class = \"inventory_item\"]");
     private final ElementsCollection productsList = $$x("//div[@class = \"inventory_item_name \"]");
     private final ElementsCollection addToCartButtons = $$x("//button[@class = \"btn btn_primary btn_small btn_inventory \"]");
     private final SelenideElement shoppingCartBadge = $x("//span[@class = \"shopping_cart_badge\"]");
@@ -17,13 +22,25 @@ public class ProductsPage {
     private final SelenideElement filterOptionLowHigh = $x("//select//option[@value = \"lohi\"]");
     private final SelenideElement filterOptionHighLow = $x("//select//option[@value = \"hilo\"]");
     private final SelenideElement shoppingCartButton = $x("//div//a[@class = \"shopping_cart_link\"]");
+    private final ElementsCollection productsLinks = $$x("//div[@class='inventory_item_label']//a[@href]");
 
-
-    public String getFirstProductDescription() {
+    public String getFirstProductName() {
         return productsList.first().text();
     }
 
-    public String  getLastProductDescription() {
+    public void openProductsLinks() {
+        List<String> links = new ArrayList<>();
+        productsLinks.forEach(x->links.add(x.getAttribute("href")));
+        links.forEach(Selenide::open);
+    }
+
+    public List<String> getProductsLinks() {
+        List<String> links = new ArrayList<>();
+        productsLinks.forEach(x->links.add(x.getAttribute("href")));
+        return links;
+    }
+
+    public String  getLastProductName() {
         return productsList.last().text();
     }
     public SelenideElement getShoppingCartBadge() {

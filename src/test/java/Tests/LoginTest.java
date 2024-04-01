@@ -1,5 +1,8 @@
+package Tests;
+
+import Pages.LoginPage;
+import Tests.BaseTest;
 import com.codeborne.selenide.Condition;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.$x;

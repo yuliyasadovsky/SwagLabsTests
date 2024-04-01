@@ -1,3 +1,5 @@
+package Tests;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -12,6 +14,7 @@ abstract public class BaseTest {
         Configuration.webdriverLogsEnabled = true;
         Configuration.browserSize = "2880×1800";
         Configuration.headless = false;
+        Configuration.reportsFolder = "/Users/yuliya/Desktop/Flank/Tests/src/test/java/Reports";
     }
 
     @Before
